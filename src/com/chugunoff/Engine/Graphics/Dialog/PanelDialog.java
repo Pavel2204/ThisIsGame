@@ -7,20 +7,22 @@ import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-public class OncePanelDialog extends JLabel {
+public class PanelDialog extends JLabel {
     public JLabel l1,l2,l3,face,background;
     JFrame frame;
     JPanel panel;
     ImageIcon icon;
+    boolean i = true;
     String[] texts;
     volatile long sleep, y;
     public volatile long allTime;
     Font font;
     GraphicsDictor dicktor = new GraphicsDictor();
-    public Thread main;
+    public Thread main,nextDialog;
 
-     public OncePanelDialog(JFrame frame, JPanel panel,ImageIcon icon, int y, String[] texts, Font font) {
+     public PanelDialog(JFrame frame, JPanel panel, ImageIcon icon, int y, String[] texts, Thread nextDialog , Font font) {
         setIcon(Config.resources.Dialog);
+        this.nextDialog = nextDialog;
         this.frame = frame;
         this. panel = panel;
         this.y = y;
@@ -87,8 +89,12 @@ public class OncePanelDialog extends JLabel {
              public void keyPressed(KeyEvent e) {
                  if (e.getKeyChar() == 'x'){
                     // main.interrupt();
+                     if(i) {
+                         nextDialog.start();
+                         i = !i;
+                     }
                      setVisible(false);
-                     return;
+                    // return;
                  }
              }
          });
