@@ -22,7 +22,7 @@ import static com.chugunoff.InfoClasses.Config.dir;
 public class FC_ONE implements Runnable {
     //FOR TESTS
     /*
-    1055x200
+    1055x20
      */
 
     JFrame frame;
