@@ -1,7 +1,7 @@
 package com.chugunoff.Windows.Rooms.FirstCircle;
 
 import com.chugunoff.Engine.Graphics.Animation;
-import com.chugunoff.Engine.Graphics.Dialog.OncePanelDialog;
+import com.chugunoff.Engine.Graphics.Dialog.PanelDialog;
 import com.chugunoff.Engine.Graphics.Object;
 import com.chugunoff.Engine.Utils.Dialog;
 import com.chugunoff.InfoClasses.Config;
@@ -25,14 +25,14 @@ public class Bar implements Runnable {
     JLabel player, Background, location;
     Wall tables1, tables2, tables3,DarvinWall;
     TPZone Back;
-    boolean onDarvin = false;
+    boolean onDarvin = false,ije = true;
     int ACLeft = 0;
     int ACRight = 0;
     int ACUp = 0;
     int ACDown = 0;
     String deltaDirect = "Up";
     Animation f1,f2,f3,f4, Darvin;
-    OncePanelDialog DarvinDialog;
+    PanelDialog DarvinDialog;
 
     @Override
     public void run() {
@@ -40,11 +40,20 @@ public class Bar implements Runnable {
     }
 
     private void initDialogs(){
-        DarvinDialog = new OncePanelDialog(frame,panel,Config.resources.PlayerDown[0],Player.y,new String[]{
-                "Похоже он спит...",
-                "",
-                ""
-        },Config.resources.font.getFont(22.5f));
+        DarvinDialog = new PanelDialog(frame,panel,Config.resources.Darvin.icons[0],Player.y,new String[]{
+                "Хррррр...",
+                "Хррррр...",
+                "Хррррр..."
+        },new Thread(new Runnable() {
+            @Override
+            public void run() {
+                if(ije) {
+                    frame.dispose();
+                    reInitFrame2();
+                    ije = !ije;
+                }
+            }
+        }),Config.resources.font.getFont(22.5f));
     }
 
     void initFrame() {
@@ -57,6 +66,40 @@ public class Bar implements Runnable {
 
         frame = new JFrame();
         initDialogs();
+        drawFrame();
+        initListeners();
+
+
+        frame.setContentPane(panel);
+        frame.setUndecorated(Config.isNOTDecorated);
+        frame.pack();
+        frame.setSize(Config.WIN_WIDTH, Config.WIN_HEIGHT);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+        frame.setTitle("Game|" + Player.Name + "|");
+    }
+
+    void reInitFrame2(){
+        JFrame.setDefaultLookAndFeelDecorated(false);
+
+        panel = new JPanel();
+        panel.setBounds(-1800, 0, Config.WIN_WIDTH, 2000);
+        panel.setBackground(Color.WHITE);
+        panel.setLayout(null);
+
+        frame = new JFrame();
+        initDialogs();
+        new PanelDialog(frame,panel,Config.resources.PlayerDown[0],Player.y, new String[]{
+                "Похоже он спит...",
+                "",
+                ""
+        },new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        }),Config.resources.font.getFont(22.5f)).init();
         drawFrame();
         initListeners();
 

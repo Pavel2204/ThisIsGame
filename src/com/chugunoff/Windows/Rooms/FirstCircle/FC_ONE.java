@@ -22,7 +22,7 @@ import static com.chugunoff.InfoClasses.Config.dir;
 public class FC_ONE implements Runnable {
     //FOR TESTS
     /*
-    1055x20
+    1055x200
      */
 
     JFrame frame;
@@ -41,7 +41,7 @@ public class FC_ONE implements Runnable {
     volatile boolean f = false;
     String deltaDirect = "Right";
 
-    OncePanelDialog test,test2;
+    PanelDialog test,test2;
 
 
     static Object player;
@@ -58,10 +58,15 @@ public class FC_ONE implements Runnable {
 
     void debugMode(){
 
-        test = new OncePanelDialog(frame,panel,LoadResource.PlayerDown[0],Player.y,  new String[]{
+        test = new PanelDialog(frame,panel,LoadResource.PlayerDown[0],Player.y,  new String[]{
                 "А вы знали, что главный программист игры",
                 "ОЧЕНЬ сильно любит печеньку?"
-                ,"Знали, а?"}, LoadResource.font.getFont(22.5f));
+                ,"Знали, а?"},new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("ВТОРОЙ ДИАЛОГ В FC_ONE!");
+            }
+        }), LoadResource.font.getFont(22.5f));
         test.init();
 
         testWall4.setBackground(Color.WHITE);
