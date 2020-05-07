@@ -17,6 +17,7 @@ import java.awt.event.KeyEvent;
 
 import static com.chugunoff.InfoClasses.Config.dir;
 import static java.lang.Thread.sleep;
+import static javax.swing.JLayeredPane.*;
 
 public class Bar implements Runnable {
 
@@ -193,7 +194,7 @@ public class Bar implements Runnable {
 
         Background = new JLabel(Config.resources.Bar);
         Background.setBounds(0, 0, 1200, 800);
-        panel.add(Background);
+        panel.add(Background,DEFAULT_LAYER);
 
     }
     void redrawBackground(){
@@ -319,6 +320,7 @@ public class Bar implements Runnable {
                 if(e.getKeyCode() == KeyEvent.VK_Z && !DarvinWall.checkCollision(player)) {
                     frame.dispose();
                     reInitFrame();
+                    ije = true;
                 }
 
                 playerBack.setLocation(player.getLocation());

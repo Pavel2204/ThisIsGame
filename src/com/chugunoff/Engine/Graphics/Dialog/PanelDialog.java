@@ -7,6 +7,8 @@ import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+import static javax.swing.JLayeredPane.DRAG_LAYER;
+
 public class PanelDialog extends JLabel {
     public JLabel l1,l2,l3,face,background;
     JFrame frame;
@@ -53,7 +55,7 @@ public class PanelDialog extends JLabel {
         } else {
             setBounds(50, 50, 1100, Config.resources.Dialog.getIconHeight());
         }
-        panel.add(this);
+        panel.add(this,DRAG_LAYER);
         //l1
         l1 = new JLabel();
         l1.setBounds(25, 25, 925, 50);
@@ -84,17 +86,21 @@ public class PanelDialog extends JLabel {
     }
 
     synchronized void setCloseListener(){
+
          frame.addKeyListener(new KeyAdapter() {
              @Override
              public void keyPressed(KeyEvent e) {
-                 if (e.getKeyChar() == 'x'){
-                    // main.interrupt();
-                     if(i) {
+                 if (i == true) {
+                     if (e.getKeyChar() == 'x') {
+                         // main.interrupt();
+
                          nextDialog.start();
-                         i = !i;
+                         i = false;
+
+
+                         setVisible(i);
+
                      }
-                     setVisible(false);
-                    // return;
                  }
              }
          });

@@ -218,18 +218,19 @@ public class FC_ONE implements Runnable {
                         }
                     }
                 }
-                if(e.getKeyChar() == 'a'){
+                if(e.getKeyChar() == 'a') {
                     deltaDirect = "Left";
-                    if(testWall2.checkCollision(new JLabel())) {//
-                        if (testWall.checkCollision(player)) {
+                    if (Player.x > 0) {
+                        if (testWall2.checkCollision(new JLabel())) {//
+                            if (testWall.checkCollision(player)) {
                                 if (x <= 1800 && x > 0) {
                                     x -= 20;
-                                }else{
+                                } else {
                                     Player.move("Left");
                                     player.setLocation(Player.x, Player.y);
                                 }
-                               // Config.player.move("Left");
-                               //w player.setLocation(Config.player.x, Config.player.y);
+                                // Config.player.move("Left");
+                                //w player.setLocation(Config.player.x, Config.player.y);
 
                                 try {
                                     Thread.sleep(Config.SLEEPMS);
@@ -238,13 +239,14 @@ public class FC_ONE implements Runnable {
                                 }
 
 
-                            if (ACLeft > 7) {
-                                ACLeft = 0;
-                            }
+                                if (ACLeft > 7) {
+                                    ACLeft = 0;
+                                }
 
-                            player.setIcon(LoadResource.PlayerLeft[ACLeft]);
-                           // player.setLocation(Config.player.x, Config.player.y);
-                            ACLeft++;
+                                player.setIcon(LoadResource.PlayerLeft[ACLeft]);
+                                // player.setLocation(Config.player.x, Config.player.y);
+                                ACLeft++;
+                            }
                         }
                     }
                 }
@@ -277,33 +279,35 @@ public class FC_ONE implements Runnable {
                 }
                 if(e.getKeyChar() == 'd') {
                     deltaDirect = "Right";
-                    if (testWall2.checkCollision(player))
-                     if (testWall3.checkCollision(player)) {
-                        if (testWall4.checkCollision(player)) {
-                                if (x < 1800) {
-                                    x += 20;
-                                }else{
-                                    Player.move("Right");
-                                    player.setLocation(Player.x, Player.y);
+                    if (Player.x < 1100) {
+                        if (testWall2.checkCollision(player))
+                            if (testWall3.checkCollision(player)) {
+                                if (testWall4.checkCollision(player)) {
+                                    if (x < 1800) {
+                                        x += 20;
+                                    } else {
+                                        Player.move("Right");
+                                        player.setLocation(Player.x, Player.y);
+                                    }
+                                    //Player.move("Right");
+                                    //player.setLocation(Config.player.x, Config.player.y);
+
+                                    try {
+                                        Thread.sleep(35L);
+                                    } catch (InterruptedException ex) {
+                                        new Dialog("The error has occuped! \n " + ex.toString());
+                                    }
+
+
+                                    if (ACRight > 7) {
+                                        ACRight = 0;
+                                    }
+
+                                    player.setIcon(LoadResource.PlayerRight[ACRight]);
+                                    ACRight++;
                                 }
-                                //Player.move("Right");
-                                //player.setLocation(Config.player.x, Config.player.y);
 
-                                try {
-                                    Thread.sleep(35L);
-                                } catch (InterruptedException ex) {
-                                    new Dialog("The error has occuped! \n " + ex.toString());
-                                }
-
-
-                            if (ACRight > 7) {
-                                ACRight = 0;
                             }
-
-                            player.setIcon(LoadResource.PlayerRight[ACRight]);
-                            ACRight++;
-                        }
-
                     }
                 }
 
