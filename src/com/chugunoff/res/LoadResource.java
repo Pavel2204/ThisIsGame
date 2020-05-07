@@ -114,6 +114,117 @@ public class LoadResource {
                 new ImageIcon(dir + "/src/com/chugunoff/res/img/obj/Bar/fire4/fire5.png"),
         };
 
+        //Barman
+        ImageIcon[] BarmanSmokes = new ImageIcon[]{
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Smoke/Smoke1.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Smoke/Smoke2.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Smoke/Smoke3.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Smoke/Smoke4.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Smoke/Smoke5.png")
+        };
+
+        ImageIcon[] BarmanBeer = new ImageIcon[]{
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад1.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад2.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад3.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад4.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад5.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад6.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад7.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад8.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад9.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад10.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад11.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад12.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад13.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад14.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад15.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад16.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад17.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад18.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад19.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад20.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад21.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад22.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад23.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад24.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад25.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад26.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад27.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад28.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад29.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад30.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад31.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад32.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад33.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад34.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад35.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад36.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад37.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад38.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад39.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад40.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад41.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад42.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад43.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад44.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад45.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад46.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад47.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад48.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад49.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад50.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад51.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад52.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад53.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад54.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад55.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад56.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад57.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад58.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад59.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад60.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад61.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад62.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад63.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад64.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад65.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад66.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад67.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад68.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад69.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад70.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад71.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад72.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад73.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад74.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад75.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад76.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад77.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад78.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад79.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад80.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад81.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад82.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад83.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад84.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад85.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад86.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад87.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад88.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад89.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад90.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад91.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад92.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад93.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад94.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад95.png"),
+                new ImageIcon(dir + "/src/com/chugunoff/res/img/NPC/Barman/Beer/ад96.png")
+
+
+
+        };
+
 
         ImageIcon HENTAI = new ImageIcon(dir + "/src/com/chugunoff/res/bkg/HENTAI.jpeg");
         ImageIcon PlayerUp1 = new ImageIcon(dir + "/src/com/chugunoff/res/img/player/playerUp1.png");
@@ -131,6 +242,8 @@ public class LoadResource {
         this.SettingsAct = SettingsAct;
         this.SettingsDeact = SettingsDeact;
         this.ExitGameAct = ExitGameAct;
+        this.BarmanBeer = BarmanBeer;
+        this.BarmanSmoke = BarmanSmokes;
         this.ExitGameDeact = ExitGameDeact;
         this.font = font;
         this.ExitAlternative = ExitAlternative;
@@ -183,7 +296,8 @@ public class LoadResource {
     public static ImageIcon[] PlayerUp;
     public static _Font_ font;
     public static ImageIcon[] PlayerDown;
-
+    public static ImageIcon[] BarmanBeer;
+    public static ImageIcon[] BarmanSmoke;
     public static NPC Darvin;
 
 

@@ -32,7 +32,7 @@ public class Bar implements Runnable {
     int ACUp = 0;
     int ACDown = 0;
     String deltaDirect = "Up";
-    Animation f1,f2,f3,f4, Darvin;
+    Animation f1,f2,f3,f4, Darvin,BarBeer,BarSmoke;
     PanelDialog DarvinDialog;
 
     @Override
@@ -209,6 +209,8 @@ public class Bar implements Runnable {
         f3 = new Animation(Config.resources.BarFire3, new Object(870, 70, Config.resources.BarFire3[1], panel), 4, 100, true);
         f4 = new Animation(Config.resources.BarFire4, new Object(0, 0, Config.resources.BarFire4[1], panel), 4, 100, true);
         Darvin = new Animation(Config.resources.Darvin.icons, LoadResource.Darvin, 1, 750, true);
+        BarBeer = new Animation(Config.resources.BarmanBeer, new Object(600,0,Config.resources.BarmanBeer[0],panel),95,100L,false);
+        BarBeer = new Animation(Config.resources.BarmanSmoke, new Object(600,0,Config.resources.BarmanSmoke[0],panel),95,100L,true);
 
         f1.animate();
         f2.animate();
