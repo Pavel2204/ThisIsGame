@@ -15,6 +15,7 @@ public class Main {
         });
 
         mainMenu.start();
+        System.out.println("Game started.www");
 
     }
 }
