@@ -21,7 +21,7 @@ import static javax.swing.JLayeredPane.*;
 
 public class Bar implements Runnable {
 
-    JFrame frame;
+    JFrame frame;//xd
     JPanel panel, playerBack;
     JLabel player, Background, location;
     Wall tables1, tables2, tables3,DarvinWall;

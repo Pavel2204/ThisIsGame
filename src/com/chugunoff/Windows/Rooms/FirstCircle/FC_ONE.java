@@ -21,7 +21,7 @@ import static com.chugunoff.InfoClasses.Config.dir;
 
 public class FC_ONE implements Runnable {
     //FOR TESTS
-    /*
+    /*xd
     1055x200
      */
 

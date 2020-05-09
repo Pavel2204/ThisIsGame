@@ -17,7 +17,7 @@ public class PanelDialog extends JLabel {
     boolean i = true;
     String[] texts;
     volatile long sleep, y;
-    public volatile long allTime;
+    public volatile long allTime;//
     Font font;
     GraphicsDictor dicktor = new GraphicsDictor();
     public Thread main,nextDialog;
