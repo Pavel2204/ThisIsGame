@@ -1,9 +1,9 @@
 package com.chugunoff.res;
 
-import com.chugunoff.Engine.Graphics.NPC;
-import com.chugunoff.Engine.Graphics.Dialog._Font_;
-import com.chugunoff.InfoClasses.Items;
-import com.chugunoff.InfoClasses.Scripts;
+import com.chugunoff.ThisIsGame.Engine.Graphics.NPC;
+import com.chugunoff.ThisIsGame.Engine.Graphics.Dialog._Font_;
+import com.chugunoff.ThisIsGame.InfoClasses.Items;
+import com.chugunoff.ThisIsGame.InfoClasses.Scripts;
 import javax.swing.*;
 
 public class LoadResource {
