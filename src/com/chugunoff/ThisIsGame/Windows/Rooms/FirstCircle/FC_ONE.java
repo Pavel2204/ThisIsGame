@@ -206,9 +206,9 @@ public class FC_ONE implements Runnable {
                             }
 
 
-                        if (ACUp > 6) {
+                        if (ACUp > 6)
                             ACUp = 0;
-                        }
+
 
                         player.setIcon(LoadResource.PlayerUp[ACUp]);
                         // player.setLocation(Config.player.x, Config.player.y);

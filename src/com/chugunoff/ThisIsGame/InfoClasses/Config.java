@@ -11,7 +11,7 @@ public class Config {
 
     public static final int WIN_WIDTH = 1200;
     public static final int WIN_HEIGHT = 800;
-    public static final boolean DEBUG = false;
+    public static final boolean DEBUG = true;
     public static final int SLEEPMS = 32;
     public static final String dir = new File("").getAbsolutePath();
 //wsww
