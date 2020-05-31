@@ -1,7 +1,6 @@
-package com.chugunoff.MIDI;
+package com.chugunoff.ThisIsGame.Engine.Media.MIDI;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class Dialog extends JDialog{
     public Dialog(String text){

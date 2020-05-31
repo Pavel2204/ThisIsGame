@@ -3,6 +3,7 @@ package com.chugunoff.ThisIsGame.InfoClasses;
 import com.chugunoff.ThisIsGame.Engine.Control.Camera;
 import com.chugunoff.ThisIsGame.Engine.Control.Player;
 import com.chugunoff.res.LoadResource;
+import org.python.util.PythonInterpreter;
 
 import java.awt.*;
 import java.io.File;
@@ -16,6 +17,8 @@ public class Config {
     public static final String dir = new File("").getAbsolutePath();
 //wsww
 
+    //Game Modules
+    public static PythonInterpreter python = new PythonInterpreter();
 
     //Game Classes-[Functions]
     public static Player player;

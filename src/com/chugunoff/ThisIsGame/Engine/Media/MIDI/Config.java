@@ -1,4 +1,4 @@
-package com.chugunoff.MIDI;
+package com.chugunoff.ThisIsGame.Engine.Media.MIDI;
 
 
 public class Config {
