@@ -1,13 +1,11 @@
 package com.chugunoff.ThisIsGame;
 
-import com.chugunoff.ThisIsGame.Engine.Media.Player.Playlist;
-import com.chugunoff.ThisIsGame.Engine.Media.Player.Song;
-import com.chugunoff.ThisIsGame.Windows.MainMenu;
-
+import com.chugunoff.ThisIsGame.Windows.Windows.MainMenu;
 
 public class Main {
 
     public static void main(String[] args) {
+
 
         Thread mainMenu = new Thread(new Runnable() {
             @Override
@@ -17,7 +15,8 @@ public class Main {
             }
         });
 
-       mainMenu.start();
-        System.out.println("Game started.www");
+
+        mainMenu.start();
+        System.out.println("Game started.");
     }
 }

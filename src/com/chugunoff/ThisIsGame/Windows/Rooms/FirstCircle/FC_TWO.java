@@ -23,12 +23,12 @@ public class FC_TWO implements Runnable {
     JLabel player;
     JLabel background;
 
-    ImageIcon BGImage = Config.resources.Transition;
+    ImageIcon BGImage = Config.resources.Bar;//
     String direction;
     Camera camera;
     Wall wLeft, wRight, wUp, wDown;
 
-    int winH = BGImage.getIconHeight();
+    int winH =  800;
     int winW = BGImage.getIconWidth();
     int ACLeft = 0;
     int ACRight = 0;
@@ -79,7 +79,7 @@ public class FC_TWO implements Runnable {
         wLeft = new Wall(0,0,1,winH);
         wRight = new Wall(winW - 1,0,1,winH);
         wUp = new Wall(0,0,winW,1);
-        wDown = new Wall(0,winH - 1,winW,1);
+        wDown = new Wall(0,738 ,winW,1);
 
         debugMode(Config.DEBUG);
 

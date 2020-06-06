@@ -1,5 +1,6 @@
 package com.chugunoff.ThisIsGame.Engine.Graphics;
 
+import com.chugunoff.ThisIsGame.Engine.Annotations.GameRoom;
 import com.chugunoff.ThisIsGame.Engine.Control.Camera;
 import com.chugunoff.ThisIsGame.Engine.Control.Player;
 import com.chugunoff.ThisIsGame.Engine.Utils.Dialog;
@@ -15,6 +16,7 @@ import java.awt.event.KeyEvent;
 
 import static com.chugunoff.ThisIsGame.InfoClasses.Config.dir;
 
+@GameRoom
 public abstract class GameWindow implements Runnable{
 
     JFrame frame;
@@ -48,6 +50,7 @@ public abstract class GameWindow implements Runnable{
         }
     }
 
+    @GameRoom
     void initFrame(){
         JFrame.setDefaultLookAndFeelDecorated(false);
 

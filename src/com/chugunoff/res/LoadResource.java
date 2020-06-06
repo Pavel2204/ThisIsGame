@@ -29,6 +29,8 @@ public class LoadResource {
         ImageIcon Dialog = new ImageIcon(dir + "/src/com/chugunoff/res/img/obj/Dialog/Dialog.png");
         _Font_ font = new _Font_(dir + "/src/com/chugunoff/res/fnt/ru_RU.ttf");
 
+        //LOGO
+        ImageIcon AESLogo = new ImageIcon(dir + "/src/com/chugunoff/res/logo/AESLogo.png");
 
         //NPCs
 
@@ -236,6 +238,7 @@ public class LoadResource {
         this.BarFire = BarFire;
         this.BarFire3 = BarFire3;
         this.BarFire4 = BarFire4;
+        this.AESLogo = AESLogo;
         this.BarFire2 = BarFire2;
         this.LoadGameDeact = LoadGameDeact;
         this.Dialog = Dialog;
@@ -290,6 +293,7 @@ public class LoadResource {
     public static ImageIcon[] BarFire;
     public static ImageIcon[] BarFire2;
     public static ImageIcon[] BarFire3;
+    public static ImageIcon AESLogo;
     public static ImageIcon[] BarFire4;
     public static ImageIcon[] PlayerRight;
     public static ImageIcon[] PlayerLeft;
