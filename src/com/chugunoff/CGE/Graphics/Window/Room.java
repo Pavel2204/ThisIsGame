@@ -75,9 +75,9 @@ public class Room implements Runnable {
             Config.frame.setLocationRelativeTo(null);
             Config.frame.setVisible(true);
             Config.frame.setTitle("Game|" + Player.Name + "|");
-            Config.i = false;
+            Config.i = false;//wtf?
 
-    }
+    }//НАЖМИ CTRL+SHIFT+K ТАМ РЕШЕНИЕ
 
     public void drawFrame(JPanel panel) {
         drawOnPlayer();
