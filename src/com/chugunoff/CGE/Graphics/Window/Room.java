@@ -66,7 +66,7 @@ public class Room implements Runnable {
         initListeners(panel);
         panel.add(background);
 
-        if(Config.i) {
+           // Config.frame= new JFrame();
             Config.frame.setContentPane(panel);
             Config.frame.setUndecorated(Config.isNOTDecorated);
             Config.frame.pack();
@@ -76,7 +76,7 @@ public class Room implements Runnable {
             Config.frame.setVisible(true);
             Config.frame.setTitle("Game|" + Player.Name + "|");
             Config.i = false;
-        }
+
     }
 
     public void drawFrame(JPanel panel) {
@@ -381,6 +381,8 @@ public class Room implements Runnable {
     }
 
     public void removeself(GameWindow win){
+        //Config.frame.dispose();
+        Config.i = true;
         win.panel = new JPanel();
     }
 
