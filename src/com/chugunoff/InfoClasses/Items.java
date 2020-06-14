@@ -1,6 +1,6 @@
 package com.chugunoff.InfoClasses;
 
-import com.chugunoff.GEngine.Inventory.Item;
+import com.chugunoff.CGE.Inventory.Item;
 
 import java.util.*;
 

@@ -1,6 +1,6 @@
 package com.chugunoff.Windows.Windows;
 
-import com.chugunoff.GEngine.Game.Config;
+import com.chugunoff.CGE.Game.Config;
 
 import javax.swing.*;
 import java.awt.*;
@@ -40,7 +40,7 @@ public class Settings implements Runnable {
 
     int exit(){
         frame.dispose();
-        return WindowConstants.DO_NOTHING_ON_CLOSE;
+        return WindowConstants.DISPOSE_ON_CLOSE;
     }
 
     void initObjects(){

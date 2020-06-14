@@ -1,14 +1,15 @@
 package com.chugunoff.Windows.Rooms.FirstCircle;
 
-import com.chugunoff.GEngine.Graphics.Object;
-import com.chugunoff.GEngine.Game.Config;
-import com.chugunoff.GEngine.Control.Player;
-import com.chugunoff.GEngine.Zones.ScriptZone;
-import com.chugunoff.GEngine.Zones.TPZone;
-import com.chugunoff.GEngine.Zones.Wall;
+import com.chugunoff.CGE.Graphics.Object;
+import com.chugunoff.CGE.Game.Config;
+import com.chugunoff.CGE.Control.Player;
+import com.chugunoff.CGE.Graphics.Window.Room;
+import com.chugunoff.CGE.Zones.ScriptZone;
+import com.chugunoff.CGE.Zones.TPZone;
+import com.chugunoff.CGE.Zones.Wall;
 import com.chugunoff.InfoClasses.Scripts;
-import com.chugunoff.GEngine.Utils.Dialog;
-import com.chugunoff.GEngine.Graphics.Dialog.*;
+import com.chugunoff.CGE.Utils.Dialog;
+import com.chugunoff.CGE.Graphics.Dialog.*;
 import com.chugunoff.Windows.Rooms.StartRoom;
 import com.chugunoff.res.LoadResource;
 
@@ -17,9 +18,9 @@ import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-import static com.chugunoff.GEngine.Game.Config.dir;
+import static com.chugunoff.CGE.Game.Config.dir;
 
-public class FC_ONE implements Runnable {
+public class FC_ONE extends Room {
     //FOR TESTS
     /*xd
     1055x200
@@ -169,7 +170,7 @@ public class FC_ONE implements Runnable {
 
     }
 
-    private void after(){
+    public void after(){
         Background.setLocation(-x, 0);
         startRoom.checkTPZone(player,new StartRoom(),frame);
         startRoom.setLocation(-x,280);

@@ -1,13 +1,14 @@
 package com.chugunoff.Windows.Rooms.FirstCircle;
 
-import com.chugunoff.GEngine.Graphics.Animation;
-import com.chugunoff.GEngine.Graphics.Dialog.PanelDialog;
-import com.chugunoff.GEngine.Graphics.Object;
-import com.chugunoff.GEngine.Utils.Dialog;
-import com.chugunoff.GEngine.Game.Config;
-import com.chugunoff.GEngine.Control.Player;
-import com.chugunoff.GEngine.Zones.TPZone;
-import com.chugunoff.GEngine.Zones.Wall;
+import com.chugunoff.CGE.Graphics.Animation;
+import com.chugunoff.CGE.Graphics.Dialog.PanelDialog;
+import com.chugunoff.CGE.Graphics.Object;
+import com.chugunoff.CGE.Graphics.Window.Room;
+import com.chugunoff.CGE.Utils.Dialog;
+import com.chugunoff.CGE.Game.Config;
+import com.chugunoff.CGE.Control.Player;
+import com.chugunoff.CGE.Zones.TPZone;
+import com.chugunoff.CGE.Zones.Wall;
 import com.chugunoff.res.LoadResource;
 
 import javax.swing.*;
@@ -15,11 +16,11 @@ import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-import static com.chugunoff.GEngine.Game.Config.dir;
+import static com.chugunoff.CGE.Game.Config.dir;
 import static java.lang.Thread.sleep;
 import static javax.swing.JLayeredPane.*;
 
-public class Bar implements Runnable {
+public class Bar extends Room {
 
     JFrame frame;//xd
     JPanel panel, playerBack;

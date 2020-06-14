@@ -1,10 +1,11 @@
 package com.chugunoff.Windows.Rooms;
 
 
-import com.chugunoff.GEngine.Game.Config;
-import com.chugunoff.GEngine.Control.Player;
-import com.chugunoff.GEngine.Zones.TPZone;
-import com.chugunoff.GEngine.Utils.Dialog;
+import com.chugunoff.CGE.Game.Config;
+import com.chugunoff.CGE.Control.Player;
+import com.chugunoff.CGE.Graphics.Window.Room;
+import com.chugunoff.CGE.Zones.TPZone;
+import com.chugunoff.CGE.Utils.Dialog;
 import com.chugunoff.Windows.Rooms.FirstCircle.FC_ONE;
 
 import javax.swing.*;
@@ -14,7 +15,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class StartRoom extends JPanel implements Runnable {
+public class StartRoom extends Room {
 
     JFrame frame;
     JPanel panel;

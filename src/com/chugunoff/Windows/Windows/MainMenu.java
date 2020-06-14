@@ -1,11 +1,11 @@
 package com.chugunoff.Windows.Windows;
 
-import com.chugunoff.GEngine.Graphics.CutScene.Slide;
-import com.chugunoff.GEngine.Graphics.Dialog.GraphicsDictor;
-import com.chugunoff.GEngine.Utils.IconInfo;
-import com.chugunoff.GEngine.Utils.Sleep;
-import com.chugunoff.GEngine.Game.Config;
-import com.chugunoff.GEngine.IOGame.Load;
+import com.chugunoff.CGE.Graphics.CutScene.Slide;
+import com.chugunoff.CGE.Graphics.Dialog.GraphicsDictor;
+import com.chugunoff.CGE.Utils.IconInfo;
+import com.chugunoff.CGE.Utils.Sleep;
+import com.chugunoff.CGE.Game.Config;
+import com.chugunoff.CGE.IOGame.Load;
 
 import javax.swing.*;
 import java.awt.*;

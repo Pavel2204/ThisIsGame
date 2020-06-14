@@ -1,7 +1,7 @@
 package com.chugunoff.res;
 
-import com.chugunoff.GEngine.Graphics.NPC;
-import com.chugunoff.GEngine.Graphics.Dialog._Font_;
+import com.chugunoff.CGE.Graphics.NPC;
+import com.chugunoff.CGE.Graphics.Dialog._Font_;
 import com.chugunoff.InfoClasses.Items;
 import com.chugunoff.InfoClasses.Scripts;
 import javax.swing.*;
@@ -27,6 +27,8 @@ public class LoadResource {
         ImageIcon Transition = new ImageIcon(dir + "/src/com/chugunoff/res/bkg/Transition.png");
         ImageIcon Bar = new ImageIcon(dir + "/src/com/chugunoff/res/bkg/Bar.png");
         ImageIcon Crossroads = new ImageIcon(dir + "/src/com/chugunoff/res/bkg/Crossroads.png");
+        ImageIcon Sixy = new ImageIcon(dir + "/src/com/chugunoff/res/bkg/Sixy.png");
+        ImageIcon Sixy2 = new ImageIcon(dir + "/src/com/chugunoff/res/bkg/Sixy2.png");
         ImageIcon Dialog = new ImageIcon(dir + "/src/com/chugunoff/res/img/obj/Dialog/Dialog.png");
         _Font_ font = new _Font_(dir + "/src/com/chugunoff/res/fnt/ru_RU.ttf");
 
@@ -265,6 +267,8 @@ public class LoadResource {
         this.PlayerDown = PlayerDown;
         this.Transition = Transition;
         this.Bar = Bar;
+        this.Sixy = Sixy;
+        this.Sixy2 = Sixy2;
 
 
         this.HENTAI = HENTAI;
@@ -292,6 +296,8 @@ public class LoadResource {
     public static ImageIcon Transition;
     public static ImageIcon Bar;
     public static ImageIcon Dialog;
+    public static ImageIcon Sixy;
+    public static ImageIcon Sixy2;
     public static ImageIcon[] BarFire;
     public static ImageIcon[] BarFire2;
     public static ImageIcon[] BarFire3;

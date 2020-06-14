@@ -1,6 +1,6 @@
 package com.chugunoff.InfoClasses;
 
-import com.chugunoff.GEngine.Utils.Dialog;
+import com.chugunoff.CGE.Utils.Dialog;
 
 public class Scripts {
 

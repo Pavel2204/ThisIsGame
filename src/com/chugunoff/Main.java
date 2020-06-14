@@ -1,10 +1,16 @@
 package com.chugunoff;
 
+import com.chugunoff.JSON.JSONArray;
+import com.chugunoff.JSON.JSONObject;
+import com.chugunoff.JSON.parser.JSONParser;
+import com.chugunoff.JSON.parser.ParseException;
 import com.chugunoff.Windows.Windows.MainMenu;
 
-public class Main {
+import java.lang.reflect.Array;
 
-    public static void main(String[] args) {
+public class Main {
+//Адрес Бога: Посад, ул. Садовая д. 2
+    public static void main(String[] args) throws ParseException {
 
 
         Thread mainMenu = new Thread(new Runnable() {
@@ -14,7 +20,6 @@ public class Main {
                 javax.swing.SwingUtilities.invokeLater(main);
             }
         });
-
 
         mainMenu.start();
         System.out.println("Game started.");

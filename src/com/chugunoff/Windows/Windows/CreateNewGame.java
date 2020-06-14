@@ -1,10 +1,10 @@
 package com.chugunoff.Windows.Windows;
 
-import com.chugunoff.GEngine.Game.Config;
-import com.chugunoff.GEngine.IOGame.Load;
-import com.chugunoff.GEngine.Control.Player;
-import com.chugunoff.GEngine.IOGame.Save;
-import com.chugunoff.GEngine.Utils.Dialog;
+import com.chugunoff.CGE.Game.Config;
+import com.chugunoff.CGE.IOGame.Load;
+import com.chugunoff.CGE.Control.Player;
+import com.chugunoff.CGE.IOGame.Save;
+import com.chugunoff.CGE.Utils.Dialog;
 
 import javax.swing.*;
 import java.awt.*;
