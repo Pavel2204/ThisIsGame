@@ -2,6 +2,7 @@ package com.chugunoff.CGE.Game;
 
 import com.chugunoff.CGE.Control.Camera;
 import com.chugunoff.CGE.Control.Player;
+import com.chugunoff.CGE.Graphics.CustomElements.ChPanel;
 import com.chugunoff.res.LoadResource;
 import org.python.util.PythonInterpreter;
 
@@ -12,6 +13,7 @@ import java.io.File;
 public class Config {
 
     public static JFrame frame= new JFrame();
+    public static JPanel panel = new ChPanel();
     public static boolean i = true;
     public static final Game ThisIsGame = new Game();
     public static final int WIN_WIDTH = 1200;

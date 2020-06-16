@@ -151,7 +151,7 @@ public class Bar extends Room {
         Back.createVisible(panel);
     }
 
-    private void drawFrame() {
+    public void drawFrame() {
 
         addAnimation();
         //f1.stop();
@@ -220,7 +220,7 @@ public class Bar extends Room {
         Darvin.animate();
     }
 
-    private void initListeners() {
+    public void initListeners() {
 
         frame.addKeyListener(new KeyAdapter() {
             @Override

@@ -21,8 +21,8 @@ import static com.chugunoff.CGE.Game.Config.dir;
 public class OverlordShop extends Room {
 
     @Override
-    public void debugMode(boolean d, JPanel panel) {
-        super.debugMode(d, panel);
+    public void debugMode(boolean d) {
+        super.debugMode(d);
     }
 
     @Override
@@ -31,14 +31,14 @@ public class OverlordShop extends Room {
     }
 
     @Override
-    public void initFrame(JPanel panel, GameWindow win) {
+    public void initFrame(GameWindow win) {
         super.init(new Camera(), Config.resources.Sixy);
-        super.initFrame(panel, win);
+        super.initFrame(win);
     }
 
     @Override
-    public void drawFrame(JPanel panel) {
-        super.drawFrame(panel);
+    public void drawFrame() {
+        super.drawFrame();
 
     }
 

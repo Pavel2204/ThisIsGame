@@ -43,31 +43,31 @@ public class Room implements Runnable {
 
     }
 
-   public  void debugMode(boolean d, JPanel panel) {
+   public  void debugMode(boolean d) {
         if (d) {
-            wLeft.createVisible(panel);
-            wRight.createVisible(panel);
-            wUp.createVisible(panel);
-            wDown.createVisible(panel);
+            wLeft.createVisible(Config.panel);
+            wRight.createVisible(Config.panel);
+            wUp.createVisible(Config.panel);
+            wDown.createVisible(Config.panel);
         }
     }
 
     @com.chugunoff.CGE.Annotations.GameRoom
-    public void initFrame(JPanel panel, GameWindow win) {
+    public void initFrame(GameWindow win) {
 
         this.win = win;
 
-        panel = new JPanel();
-        panel.setBounds(0, 0, 20000000, 20000000);
-        panel.setBackground(Color.BLACK);
-        panel.setLayout(null);
+        Config.panel = new JPanel();
+        Config.panel.setBounds(0, 0, 20000000, 20000000);
+        Config.panel.setBackground(Color.BLACK);
+        Config.panel.setLayout(null);
 
-        drawFrame(panel);
-        initListeners(panel);
-        panel.add(background);
+        drawFrame();
+        initListeners();
+        Config.panel.add(background);
 
            // Config.frame= new JFrame();
-            Config.frame.setContentPane(panel);
+            Config.frame.setContentPane(Config.panel);
             Config.frame.setUndecorated(Config.isNOTDecorated);
             Config.frame.pack();
             Config.frame.setSize(1200, 800);
@@ -79,24 +79,24 @@ public class Room implements Runnable {
 
     }//НАЖМИ CTRL+SHIFT+K ТАМ РЕШЕНИЕ
 
-    public void drawFrame(JPanel panel) {
+    public void drawFrame() {
         drawOnPlayer();
 
-        player = new Object(Player.x, Player.y, LoadResource.PlayerDown[0], panel);
+        player = new Object(Player.x, Player.y, LoadResource.PlayerDown[0], Config.panel);
 
         wLeft = new Wall(0, 0, 1, winH);
         wRight = new Wall(winW - 1 , 0, 1, winH);
         wUp = new Wall(0, 0, winW, 1);
         wDown = new Wall(0, winH - 1 , winW, 1);
 
-        debugMode(Config.DEBUG, panel);
+        debugMode(Config.DEBUG);
 
         background = new JLabel(BGImage);
         background.setBounds(Camera.x,Camera.y,BGImage.getIconWidth(), BGImage.getIconHeight());
-        panel.add(background);
+        Config.panel.add(background);
     }
 
-   public void initListeners(JPanel panel) {
+   public void initListeners() {
         checkDirections();
         Config.frame.addKeyListener(new KeyAdapter() {
             @Override
@@ -209,11 +209,11 @@ public class Room implements Runnable {
     }
 
     public JPanel getPanel() {
-        return win.panel;
+        return Config.panel;
     }
 
     public void setPanel(JPanel panel) {
-        win.panel = panel;
+        Config.panel = panel;
     }
 
     public JLabel getPlayer() {
@@ -378,12 +378,13 @@ public class Room implements Runnable {
 
     public void совершитьРоскомнадзор(GameWindow win){
         removeself(win);
+
     }
 
     public void removeself(GameWindow win){
         //Config.frame.dispose();
         Config.i = true;
-        win.panel = new JPanel();
+        Config.panel = new JPanel();
     }
 
     public void init(Camera a, ImageIcon b){

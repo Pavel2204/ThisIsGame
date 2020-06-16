@@ -23,8 +23,8 @@ public class FC_TWO extends Room {
     TPZone OverShop;
 
     @Override
-    public void debugMode(boolean d, JPanel panel) {
-        super.debugMode(d, panel);
+    public void debugMode(boolean d) {
+        super.debugMode(d);
     }
 
     @Override
@@ -33,9 +33,9 @@ public class FC_TWO extends Room {
     }
 
     @Override
-    public void initFrame(JPanel panel, GameWindow win) {
+    public void initFrame(GameWindow win) {
         super.init(new Camera(), Config.resources.Crossroads);
-        super.initFrame(panel, win);
+        super.initFrame(win);
     }
 
     @Override
@@ -43,14 +43,13 @@ public class FC_TWO extends Room {
     }
 
     @Override
-    public void drawFrame(JPanel panel) {
-
-        super.drawFrame(panel);
+    public void drawFrame() {
+        super.drawFrame();
     }
 
     @Override
-    public void initListeners(JPanel panel) {
-        super.initListeners(panel);
+    public void initListeners() {
+        super.initListeners();
 
     }
 

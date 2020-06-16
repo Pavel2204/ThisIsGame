@@ -187,7 +187,7 @@ public class FC_ONE extends Room {
         location.setText("X:" + player.getX() + "\n \n Y:" + player.getY());
     }
 
-    private void initListeners() {
+    public void initListeners() {
 
         frame.addKeyListener(new KeyAdapter() {
             @Override

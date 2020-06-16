@@ -10,8 +10,6 @@ public class GameWindow {
 
     Room currentRoom = new FC_TWO();
 
-    public static JPanel panel;
-
     public GameWindow(){
 
     }
@@ -19,7 +17,7 @@ public class GameWindow {
     public void show(Room room){
         currentRoom.совершитьРоскомнадзор(this);
         currentRoom = room;
-        currentRoom.initFrame(panel, this);
+        currentRoom.initFrame(this);
     }
 
 }

@@ -84,7 +84,7 @@ public class StartRoom extends Room {
     }
 
 
-    void drawFrame() {
+    public void drawFrame() {
         //obj_player
         player = new JLabel(Config.resources.PlayerRight[0]);
         player.setBounds(Player.x, Player.y, 100, 250);
@@ -145,7 +145,7 @@ public class StartRoom extends Room {
     }
 
 
-    void initListeners() {
+    public void initListeners() {
 
         MenuBtn.addMouseListener(new MouseAdapter() {
             @Override
