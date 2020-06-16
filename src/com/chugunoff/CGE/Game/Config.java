@@ -13,7 +13,7 @@ import java.io.File;
 public class Config {
 
     public static JFrame frame= new JFrame();
-    public static JPanel panel = new ChPanel();
+    public static JPanel panel = new JPanel();
     public static boolean i = true;
     public static final Game ThisIsGame = new Game();
     public static final int WIN_WIDTH = 1200;

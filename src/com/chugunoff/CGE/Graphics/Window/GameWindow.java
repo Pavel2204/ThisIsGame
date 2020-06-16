@@ -8,7 +8,7 @@ import javax.swing.*;
 
 public class GameWindow {
 
-    Room currentRoom = new FC_TWO();
+    Room currentRoom = new Room();
 
     public GameWindow(){
 

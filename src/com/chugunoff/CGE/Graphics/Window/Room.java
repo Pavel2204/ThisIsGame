@@ -67,15 +67,15 @@ public class Room implements Runnable {
         Config.panel.add(background);
 
            // Config.frame= new JFrame();
-            Config.frame.setContentPane(Config.panel);
-            Config.frame.setUndecorated(Config.isNOTDecorated);
-            Config.frame.pack();
-            Config.frame.setSize(1200, 800);
-            Config.frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-            Config.frame.setLocationRelativeTo(null);
-            Config.frame.setVisible(true);
-            Config.frame.setTitle("Game|" + Player.Name + "|");
-            Config.i = false;//wtf?
+        Config.frame.setContentPane(Config.panel);
+        Config.frame.setUndecorated(Config.isNOTDecorated);
+        Config.frame.pack();
+        Config.frame.setSize(1200, 800);
+        Config.frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        Config.frame.setLocationRelativeTo(null);
+        Config.frame.setVisible(true);
+        Config.frame.setTitle("Game|" + Player.Name + "|");
+        Config.i = false;//wtf?
 
     }//НАЖМИ CTRL+SHIFT+K ТАМ РЕШЕНИЕ
 
@@ -98,91 +98,92 @@ public class Room implements Runnable {
 
    public void initListeners() {
         checkDirections();
-        Config.frame.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyPressed(KeyEvent e) {
-                if (e.getKeyCode() == KeyEvent.VK_W&&up) {
-                    direction = "Up";
-                    if (wUp.checkCollision(player)) {
-                        Player.move(direction);
-                        new Sleep(Config.SLEEPMS);
-                        if (ACUp > 6)
-                            ACUp = 0;
-
-                        camera.move(direction);
-                        background.setLocation(camera.x, camera.y);
-                        player.setIcon(LoadResource.PlayerUp[ACUp]);
-                        ACUp++;
-                    } else {
-                    }
-                }
-
-                if (e.getKeyCode() == KeyEvent.VK_A&&left) {
-                    direction = "Left";
-                    if (wLeft.checkCollision(player)) {
-                        Player.move(direction);
-                        new Sleep(Config.SLEEPMS);
-                        if (ACLeft > 7)
-                            ACLeft = 0;
-
-                        camera.move(direction);
-                        background.setLocation(camera.x, camera.y);
-                        player.setIcon(LoadResource.PlayerLeft[ACLeft]);
-                        ACLeft++;
-                    } else {
-                    }
-                }
-
-                if (e.getKeyCode() == KeyEvent.VK_S&&down) {
-                    direction = "Down";
-                    if (wDown.checkCollision(player)) {
-                        Player.move(direction);
-                        new Sleep(Config.SLEEPMS);
-                        if (ACDown > 6) {
-                            ACDown = 0;
-                        }
-                        camera.move(direction);
-                        background.setLocation(camera.x, camera.y);
-                        player.setIcon(LoadResource.PlayerDown[ACDown]);
-                        ACDown++;
-                    } else {
-                    }
-                }
-
-                if (e.getKeyCode() == KeyEvent.VK_D&&right) {
-                    direction = "Right";
-                    if (wRight.checkCollision(player)) {
-                        Player.move(direction);
-                        new Sleep(Config.SLEEPMS);
-                        if (ACRight > 7) {
-                            ACRight = 0;
-                        }
-                        camera.move(direction);
-                        background.setLocation(camera.x, camera.y);
-                        player.setIcon(LoadResource.PlayerRight[ACRight]);
-                        ACRight++;
-                    } else {
-                    }
-                }
-                keyListenner(e);
-                after();
-            }
-
-            @Override
-            public void keyReleased(KeyEvent e) {
-                if (direction == "Right") {
-                    player.setIcon(new ImageIcon(dir + "/src/com/chugunoff/res/img/player/right/PlayerStep.png"));
-                } else if (direction == "Left") {
-                    player.setIcon(new ImageIcon(dir + "/src/com/chugunoff/res/img/player/left/PlayerStep.png"));
-                } else if (direction == "Up") {
-                    player.setIcon(new ImageIcon(dir + "/src/com/chugunoff/res/img/player/up/PlayerStep.png"));
-                } else if (direction == "Down") {
-                    player.setIcon(new ImageIcon(dir + "/src/com/chugunoff/res/img/player/down/PlayerStep.png"));
-                }
-            }
-
-        });
+        Config.frame.addKeyListener(key);
     }
+    public KeyAdapter key = new KeyAdapter() {
+        @Override
+        public void keyPressed(KeyEvent e) {
+            if (e.getKeyCode() == KeyEvent.VK_W&&up) {
+                direction = "Up";
+                if (wUp.checkCollision(player)) {
+                    Player.move(direction);
+                    new Sleep(Config.SLEEPMS);
+                    if (ACUp > 6)
+                        ACUp = 0;
+
+                    camera.move(direction);
+                    background.setLocation(camera.x, camera.y);
+                    player.setIcon(LoadResource.PlayerUp[ACUp]);
+                    ACUp++;
+                } else {
+                }
+            }
+
+            if (e.getKeyCode() == KeyEvent.VK_A&&left) {
+                direction = "Left";
+                if (wLeft.checkCollision(player)) {
+                    Player.move(direction);
+                    new Sleep(Config.SLEEPMS);
+                    if (ACLeft > 7)
+                        ACLeft = 0;
+
+                    camera.move(direction);
+                    background.setLocation(camera.x, camera.y);
+                    player.setIcon(LoadResource.PlayerLeft[ACLeft]);
+                    ACLeft++;
+                } else {
+                }
+            }
+
+            if (e.getKeyCode() == KeyEvent.VK_S&&down) {
+                direction = "Down";
+                if (wDown.checkCollision(player)) {
+                    Player.move(direction);
+                    new Sleep(Config.SLEEPMS);
+                    if (ACDown > 6) {
+                        ACDown = 0;
+                    }
+                    camera.move(direction);
+                    background.setLocation(camera.x, camera.y);
+                    player.setIcon(LoadResource.PlayerDown[ACDown]);
+                    ACDown++;
+                } else {
+                }
+            }
+
+            if (e.getKeyCode() == KeyEvent.VK_D&&right) {
+                direction = "Right";
+                if (wRight.checkCollision(player)) {
+                    Player.move(direction);
+                    new Sleep(Config.SLEEPMS);
+                    if (ACRight > 7) {
+                        ACRight = 0;
+                    }
+                    camera.move(direction);
+                    background.setLocation(camera.x, camera.y);
+                    player.setIcon(LoadResource.PlayerRight[ACRight]);
+                    ACRight++;
+                } else {
+                }
+            }
+            keyListenner(e);
+            after();
+        }
+
+        @Override
+        public void keyReleased(KeyEvent e) {
+            if (direction == "Right") {
+                player.setIcon(new ImageIcon(dir + "/src/com/chugunoff/res/img/player/right/PlayerStep.png"));
+            } else if (direction == "Left") {
+                player.setIcon(new ImageIcon(dir + "/src/com/chugunoff/res/img/player/left/PlayerStep.png"));
+            } else if (direction == "Up") {
+                player.setIcon(new ImageIcon(dir + "/src/com/chugunoff/res/img/player/up/PlayerStep.png"));
+            } else if (direction == "Down") {
+                player.setIcon(new ImageIcon(dir + "/src/com/chugunoff/res/img/player/down/PlayerStep.png"));
+            }
+        }
+
+    };
 
     public void keyListenner(KeyEvent e){
 
@@ -378,17 +379,23 @@ public class Room implements Runnable {
 
     public void совершитьРоскомнадзор(GameWindow win){
         removeself(win);
-
     }
 
     public void removeself(GameWindow win){
         //Config.frame.dispose();
         Config.i = true;
         Config.panel = new JPanel();
+        removeobjects();
     }
 
     public void init(Camera a, ImageIcon b){
         camera = a;
         BGImage = b;
     }
+
+    public void removeobjects(){
+        Config.panel.removeAll();
+        Config.frame.removeKeyListener(key);
+    }
+
 }
