@@ -21,8 +21,8 @@ import static com.chugunoff.CGE.Game.Config.dir;
 public class OverlordShop extends Room {
 
     @Override
-    public void debugMode(boolean d) {
-        super.debugMode(d);
+    public void debug(){
+
     }
 
     @Override

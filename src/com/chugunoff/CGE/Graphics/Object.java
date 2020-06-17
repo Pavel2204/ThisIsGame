@@ -9,4 +9,5 @@ public class Object extends JLabel{
         panel.add(this);
     }
 
+
 }

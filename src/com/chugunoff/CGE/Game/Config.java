@@ -4,7 +4,6 @@ import com.chugunoff.CGE.Control.Camera;
 import com.chugunoff.CGE.Control.Player;
 import com.chugunoff.CGE.Graphics.CustomElements.ChPanel;
 import com.chugunoff.res.LoadResource;
-import org.python.util.PythonInterpreter;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,7 +24,6 @@ public class Config {
 //wsww
 
     //Game Modules
-    public static PythonInterpreter python = new PythonInterpreter();
 
     //Game Classes-[Functions]
     public static Player player;

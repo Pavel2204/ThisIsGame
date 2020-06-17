@@ -21,10 +21,11 @@ import static com.chugunoff.CGE.Game.Config.dir;
 public class FC_TWO extends Room {
 
     TPZone OverShop;
+    JLabel location;
 
     @Override
-    public void debugMode(boolean d) {
-        super.debugMode(d);
+    public void debug() {
+
     }
 
     @Override
@@ -40,11 +41,20 @@ public class FC_TWO extends Room {
 
     @Override
     public void drawOnPlayer() {
+        location = new JLabel("X: " + Config.player.x + " Y: " + Config.player.x);
+        location.setBounds(50,50,150,75);
+        location.setForeground(Color.WHITE);
+        add(location);
     }
 
     @Override
     public void drawFrame() {
         super.drawFrame();
+        OverShop = new TPZone(390,1020,300,10);
+        OverShop.setTPLocation(getCamera().x, getCamera().y + 300);
+        if(Config.DEBUG)
+            OverShop.createVisible(getPanel());
+
     }
 
     @Override
@@ -55,13 +65,14 @@ public class FC_TWO extends Room {
 
     @Override
     public void keyListenner(KeyEvent e) {
-        if(e.getKeyChar() == 'c'){
-            getWin().show(new OverlordShop());
-        }
+
     }
 
     @Override
     public void after() {
+        location.setText("X: " + getPlayer().getX() + " Y: " + getPlayer().getY());
+        OverShop.checkTPZone(getPlayer(),new OverlordShop(),getFrame());
+        OverShop.setLocation(390+ getCamera().x,795 + getCamera().y);
     }
 
     @Override

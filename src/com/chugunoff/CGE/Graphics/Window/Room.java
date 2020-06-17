@@ -36,7 +36,7 @@ public class Room implements Runnable {
     ImageIcon BGImage;
     String direction;
     Camera camera;
-    Wall wLeft, wRight, wUp, wDown;
+    Wall wLeft, wRight, wUp, wDown,playerBack;
 
     @Override
     public void run() {
@@ -49,6 +49,8 @@ public class Room implements Runnable {
             wRight.createVisible(Config.panel);
             wUp.createVisible(Config.panel);
             wDown.createVisible(Config.panel);
+            playerBack.createVisible(Config.panel);
+            debug();
         }
     }
 
@@ -56,7 +58,6 @@ public class Room implements Runnable {
     public void initFrame(GameWindow win) {
 
         this.win = win;
-
         Config.panel = new JPanel();
         Config.panel.setBounds(0, 0, 20000000, 20000000);
         Config.panel.setBackground(Color.BLACK);
@@ -88,6 +89,12 @@ public class Room implements Runnable {
         wRight = new Wall(winW - 1 , 0, 1, winH);
         wUp = new Wall(0, 0, winW, 1);
         wDown = new Wall(0, winH - 1 , winW, 1);
+        playerBack = new Wall(0,0,0,0);
+        if (playerBack.checkCollision(player)){
+            player.setLocation(500,225);
+            Config.player.x = 500;
+            Config.player.y = 125;
+        }
 
         debugMode(Config.DEBUG);
 
@@ -261,6 +268,10 @@ public class Room implements Runnable {
         return ACLeft;
     }
 
+    public void add(Component chcomp){
+        Config.panel.add(chcomp);
+    }
+
     public void setACLeft(int ACLeft) {
         this.ACLeft = ACLeft;
     }
@@ -272,6 +283,8 @@ public class Room implements Runnable {
     public void setACRight(int ACRight) {
         this.ACRight = ACRight;
     }
+
+    public void debug(){}
 
     public int getACUp() {
         return ACUp;

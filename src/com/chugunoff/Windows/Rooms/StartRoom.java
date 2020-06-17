@@ -53,7 +53,7 @@ public class StartRoom extends Room {
         }
     });
 
-    void debug(){
+    public void debug(){
         FC_ONE.createVisible(panel);
     }
 

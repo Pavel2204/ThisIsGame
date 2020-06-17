@@ -141,7 +141,7 @@ public class Bar extends Room {
         frame.setTitle("Game|" + Player.Name + "|");
     }
 
-    void debug() {
+    public void debug() {
         panel.add(location);
         panel.add(playerBack);
         // tables1.createVisible(panel);

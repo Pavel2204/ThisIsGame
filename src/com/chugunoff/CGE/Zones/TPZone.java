@@ -1,5 +1,6 @@
 package com.chugunoff.CGE.Zones;
 
+import com.chugunoff.CGE.Control.Camera;
 import com.chugunoff.CGE.Game.Config;
 import com.chugunoff.CGE.Graphics.Window.Room;
 
@@ -25,9 +26,10 @@ public class TPZone extends Wall {
 
     public void checkTPZone(JLabel player, Room Room, JFrame frame){
         if(!this.checkCollision(player)){
-            Config.player.x = x;
-            Config.player.y = y;
-            frame.dispose();
+            Camera c = Room.getCamera();
+            c.x = x;
+            c.y = y;
+            Room.setCamera(c);
             Config.ThisIsGame.gameWindow.show(Room);
         }
     }
