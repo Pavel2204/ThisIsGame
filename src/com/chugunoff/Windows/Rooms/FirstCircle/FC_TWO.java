@@ -1,31 +1,26 @@
 package com.chugunoff.Windows.Rooms.FirstCircle;
 
 import com.chugunoff.CGE.Control.Camera;
-import com.chugunoff.CGE.Graphics.Object;
+import com.chugunoff.CGE.Graphics.Animation.Animation;
+import com.chugunoff.CGE.Graphics.Animation.Object;
+import com.chugunoff.CGE.Graphics.Dialog.PanelDialog;
 import com.chugunoff.CGE.Graphics.Window.GameWindow;
 import com.chugunoff.CGE.Graphics.Window.Room;
-import com.chugunoff.CGE.Utils.Sleep;
 import com.chugunoff.CGE.Zones.TPZone;
-import com.chugunoff.CGE.Zones.Wall;
 import com.chugunoff.CGE.Game.Config;
-import com.chugunoff.CGE.Control.Player;
-import com.chugunoff.res.LoadResource;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-
-import static com.chugunoff.CGE.Game.Config.dir;
 
 public class FC_TWO extends Room {
 
     TPZone OverShop;
-    JLabel location;
+    JLabel location,PanelDialog1,PanelDialog2;
+    PanelDialog pd1,pd2;
 
     @Override
     public void debug() {
-
     }
 
     @Override
@@ -39,8 +34,20 @@ public class FC_TWO extends Room {
         super.initFrame(win);
     }
 
+    Animation d =  new Animation(Config.resources.BarmanSmoke,new Object(0,0,Config.resources.BarmanSmoke[0]),Config.resources.BarmanSmoke.length - 1,100l,true);
+
+
     @Override
     public void drawOnPlayer() {
+       Animation hui =  new Animation(Config.resources.BarmanBeer,new Object(0,0,Config.resources.BarmanBeer[0]),Config.resources.BarmanBeer.length - 1,100l,new Thread(new Runnable() {
+            @Override
+            public void run() {
+                 d.animate();
+            }
+        }));
+
+       hui.animate();
+
         location = new JLabel("X: " + Config.player.x + " Y: " + Config.player.x);
         location.setBounds(50,50,150,75);
         location.setForeground(Color.WHITE);
@@ -54,18 +61,43 @@ public class FC_TWO extends Room {
         OverShop.setTPLocation(getCamera().x, getCamera().y + 300);
         if(Config.DEBUG)
             OverShop.createVisible(getPanel());
+        PanelDialog1 = new JLabel();
+        PanelDialog2 = new JLabel();
+        Config.panel.add(PanelDialog1);
+        Config.panel.add(PanelDialog2);
 
+        pd1 = new PanelDialog(PanelDialog1,Config.resources.PlayerDown[1],getPlayer().getY(),new String[]{
+                "А вы знали,",
+                "Что главный программист игры",
+                "ОЧЕНЬ сильно хочет укусить Владиславу?"
+        },new Thread(new Runnable(){
+            @Override
+            public void run() {
+                pd2 = new PanelDialog(PanelDialog2,Config.resources.PlayerDown[3],getPlayer().getY(),new String[]{
+                    "Знали, а?",
+                    "",
+                    ""
+            },new Thread(new Runnable(){
+                @Override
+                public void run() {
+                    System.out.println("Второй диалог в FC_TWO");
+                }
+            }),175,Config.resources.font.getFont(53.5f));
+
+                pd2.init();
+            }
+        }),Config.resources.font.getFont(25f));
     }
 
     @Override
     public void initListeners() {
         super.initListeners();
-
     }
 
     @Override
     public void keyListenner(KeyEvent e) {
-
+        if(e.getKeyChar() == ',' && false)
+            pd1.init();
     }
 
     @Override

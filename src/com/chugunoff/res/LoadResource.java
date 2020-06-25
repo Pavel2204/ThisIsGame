@@ -1,6 +1,6 @@
 package com.chugunoff.res;
 
-import com.chugunoff.CGE.Graphics.NPC;
+import com.chugunoff.CGE.Graphics.Animation.NPC;
 import com.chugunoff.CGE.Graphics.Dialog._Font_;
 import com.chugunoff.InfoClasses.Items;
 import com.chugunoff.InfoClasses.Scripts;

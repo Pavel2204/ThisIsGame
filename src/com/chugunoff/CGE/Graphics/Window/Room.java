@@ -2,8 +2,7 @@ package com.chugunoff.CGE.Graphics.Window;
 
 import com.chugunoff.CGE.Control.Camera;
 import com.chugunoff.CGE.Control.Player;
-import com.chugunoff.CGE.Game.Game;
-import com.chugunoff.CGE.Graphics.Object;
+import com.chugunoff.CGE.Graphics.Animation.Object;
 import com.chugunoff.CGE.Utils.Sleep;
 import com.chugunoff.CGE.Zones.Wall;
 import com.chugunoff.CGE.Game.Config;
@@ -33,9 +32,9 @@ public class Room implements Runnable {
 
     boolean right=true,left=true,up=true,down=true;
 
-    ImageIcon BGImage;
+    ImageIcon BGImage = null;
     String direction;
-    Camera camera;
+    Camera camera = new Camera();
     Wall wLeft, wRight, wUp, wDown,playerBack;
 
     @Override
@@ -83,7 +82,7 @@ public class Room implements Runnable {
     public void drawFrame() {
         drawOnPlayer();
 
-        player = new Object(Player.x, Player.y, LoadResource.PlayerDown[0], Config.panel);
+        player = new Object(Player.x, Player.y, LoadResource.PlayerDown[0]);
 
         wLeft = new Wall(0, 0, 1, winH);
         wRight = new Wall(winW - 1 , 0, 1, winH);
@@ -100,7 +99,6 @@ public class Room implements Runnable {
 
         background = new JLabel(BGImage);
         background.setBounds(Camera.x,Camera.y,BGImage.getIconWidth(), BGImage.getIconHeight());
-        Config.panel.add(background);
     }
 
    public void initListeners() {

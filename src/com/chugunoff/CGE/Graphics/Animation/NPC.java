@@ -1,4 +1,4 @@
-package com.chugunoff.CGE.Graphics;
+package com.chugunoff.CGE.Graphics.Animation;
 
 import javax.swing.*;
 
